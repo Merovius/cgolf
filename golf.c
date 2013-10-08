@@ -5,7 +5,7 @@ int main() {
     char q[2000],*p=q;
     int d = 1;
     read(0,p,2000);
-    int s[2000],i=-1,a,b;
+    int s[2000],i=-1;
     for (;;) {
         switch (*p) {
             case 46:
@@ -30,24 +30,16 @@ int main() {
                 d = s[i--] ? -1 : 1;
                 break;
             case 43:
-                a = s[i--];
-                b = s[i--];
-                s[++i] = b + a;
+                s[--i] = s[i] + s[i+1];
                 break;
             case 45:
-                a = s[i--];
-                b = s[i--];
-                s[++i] = b - a;
+                s[--i] = s[i] - s[i+1];
                 break;
             case 47:
-                a = s[i--];
-                b = s[i--];
-                s[++i] = b / a;
+                s[--i] = s[i] / s[i+1];
                 break;
             case 42:
-                a = s[i--];
-                b = s[i--];
-                s[++i] = b * a;
+                s[--i] = s[i] * s[i+1];
                 break;
             case 32:
                 break;
