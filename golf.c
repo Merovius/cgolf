@@ -8,53 +8,53 @@ int main() {
     int s[2000],i=-1,a,b;
     for (;;) {
         switch (*p) {
-            case '.':
+            case 46:
                 printf("%d\n", s[i--]);
                 break;
-            case 'v':
+            case 118:
                 d = 80;
                 break;
-            case '^':
+            case 94:
                 d = -80;
                 break;
-            case '>':
+            case 62:
                 d = 1;
                 break;
-            case '<':
+            case 60:
                 d = -1;
                 break;
-            case '|':
+            case 124:
                 d = s[i--] ? -80 : 80;
                 break;
-            case '_':
+            case 95:
                 d = s[i--] ? -1 : 1;
                 break;
-            case '+':
+            case 43:
                 a = s[i--];
                 b = s[i--];
                 s[++i] = b + a;
                 break;
-            case '-':
+            case 45:
                 a = s[i--];
                 b = s[i--];
                 s[++i] = b - a;
                 break;
-            case '/':
+            case 47:
                 a = s[i--];
                 b = s[i--];
                 s[++i] = b / a;
                 break;
-            case '*':
+            case 42:
                 a = s[i--];
                 b = s[i--];
                 s[++i] = b * a;
                 break;
-            case ' ':
+            case 32:
                 break;
             default:
                 s[++i] = *p - '0';
                 break;
-            case '@':
+            case 64:
                 return 0;
         }
         p += d;
