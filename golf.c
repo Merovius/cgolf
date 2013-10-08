@@ -3,8 +3,7 @@
 t[2000];
 main(d) {
     char q[2001],*p=q,*s=t;
-    gets(p);
-    for (;;) {
+    for (gets(p);;p += d) {
         switch (*p) {
             c(46, printf("%d\n", *s--))
             c(118, d = 80)
@@ -23,6 +22,5 @@ main(d) {
                 break;
             c(64, return 0)
         }
-        p += d;
     }
 }
