@@ -1,7 +1,7 @@
 s[2000],i=-1;
 main(d) {
-    char q[2000],*p=q;
-    read(0,p,2000);
+    char q[2001],*p=q;
+    gets(p);
     for (;;) {
         switch (*p) {
             case 46:
