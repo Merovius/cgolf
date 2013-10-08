@@ -1,11 +1,7 @@
-#include <stdio.h>
-#include <unistd.h>
-
-int main() {
+s[2000],i=-1,d=1;
+main() {
     char q[2000],*p=q;
-    int d = 1;
     read(0,p,2000);
-    int s[2000],i=-1;
     for (;;) {
         switch (*p) {
             case 46:
