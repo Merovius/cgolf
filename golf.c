@@ -1,4 +1,5 @@
 #define c(a,x) case a: x; break;
+#define o(a,r) c(a, s[--i] = s[i] r s[i+1])
 s[2000],i=-1;
 main(d) {
     char q[2001],*p=q;
@@ -12,10 +13,10 @@ main(d) {
             c(60, d = -1)
             c(124, d = s[i--] ? -80 : 80)
             c(95, d = s[i--] ? -1 : 1)
-            c(43, s[--i] = s[i] + s[i+1])
-            c(45, s[--i] = s[i] - s[i+1])
-            c(47, s[--i] = s[i] / s[i+1])
-            c(42, s[--i] = s[i] * s[i+1])
+            o(43, +)
+            o(45, -)
+            o(47, /)
+            o(42, *)
             c(32, )
             default:
                 s[++i] = *p - '0';
