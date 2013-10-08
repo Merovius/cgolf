@@ -5,10 +5,8 @@ int main() {
     char q[2000],*p=q;
     int d = 1;
     read(0,p,2000);
-    int s[2000];
-    int i=-1;
-    int a,b;
-    while (1) {
+    int s[2000],i=-1,a,b;
+    for (;;) {
         switch (*p) {
             case '.':
                 printf("%d\n", s[i--]);
@@ -26,18 +24,10 @@ int main() {
                 d = -1;
                 break;
             case '|':
-                if (s[i--] == 0) {
-                    d = 80;
-                } else {
-                    d = -80;
-                }
+                d = s[i--] ? -80 : 80;
                 break;
             case '_':
-                if (s[i--] == 0) {
-                    d = 1;
-                } else {
-                    d = -1;
-                }
+                d = s[i--] ? -1 : 1;
                 break;
             case '+':
                 a = s[i--];
