@@ -1,7 +1,7 @@
 #define c(a,x) *p==a?x:
 #define o(a,r) c(a, (*++s = *s r *(s-1), d))
 main(d) {
-    char q[2001],*p=q,*s=p-760;
+    char q[2001],*p=q,*s;
     for (gets(p);;)
         p+=d=
         c(46, (printf("%d\n", *s++),d))
